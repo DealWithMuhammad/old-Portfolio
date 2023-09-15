@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Muhammad/static/css/main.a792b49c.css",
-    "main.js": "/Muhammad/static/js/main.e01361ce.js",
+    "main.css": "/Muhammad/static/css/main.5d6c21db.css",
+    "main.js": "/Muhammad/static/js/main.34211130.js",
     "static/js/726.b792280e.chunk.js": "/Muhammad/static/js/726.b792280e.chunk.js",
     "static/media/profile.png": "/Muhammad/static/media/profile.d0b08a0efe225bfdc1d1.png",
     "static/media/about04.png": "/Muhammad/static/media/about04.fa7b3a72ed32b0e25bfb.png",
@@ -30,13 +30,13 @@
     "static/media/git.png": "/Muhammad/static/media/git.a54d3fa44e02f2f61e69.png",
     "static/media/skype.png": "/Muhammad/static/media/skype.c8d7ee175da5b4c8a8ab.png",
     "index.html": "/Muhammad/index.html",
-    "static/media/circle.svg": "/Muhammad/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
-    "main.a792b49c.css.map": "/Muhammad/static/css/main.a792b49c.css.map",
-    "main.e01361ce.js.map": "/Muhammad/static/js/main.e01361ce.js.map",
+    "static/media/circle.svg": "/Muhammad/static/media/circle.ae5f84b3853b9e34aa83cf8dada715c5.svg",
+    "main.5d6c21db.css.map": "/Muhammad/static/css/main.5d6c21db.css.map",
+    "main.34211130.js.map": "/Muhammad/static/js/main.34211130.js.map",
     "726.b792280e.chunk.js.map": "/Muhammad/static/js/726.b792280e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a792b49c.css",
-    "static/js/main.e01361ce.js"
+    "static/css/main.5d6c21db.css",
+    "static/js/main.34211130.js"
   ]
 }
