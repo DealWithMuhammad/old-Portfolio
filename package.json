@@ -1,7 +1,7 @@
 {
   "name": "frontend_react",
   "version": "0.1.0",
-  "homepage": "https://DealWithMuhammad.github.io/Muhammad",
+  "homepage": "https://DealWithMuhammad.github.io/Portfolio",
   "private": true,
   "dependencies": {
     "@sanity/client": "^6.0.1",
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
