@@ -1,18 +1,37 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
-import { motion } from "framer-motion";
-
+import { motion, AnimatePresence } from "framer-motion";
 import { images } from "../../constants"; // import images from constants.js
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const handleMenuClick = (item) => {
+    if (item === "resume") {
+      window.location.href =
+        "https://drive.google.com/file/d/1vMQeTtJhlJhY2KFmmNNKLfQc6x2cU5uU/view?usp=drive_link";
+    } else {
+      setToggle(false);
+    }
+  };
+
+  const menuAnimation = {
+    hidden: { x: 400 },
+    visible: { x: 0 },
+    exit: { x: 400 },
+  };
+
+  const menuTransition = {
+    type: "spring",
+    stiffness: 200,
+    damping: 30,
+  };
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />{" "}
-        {/* use images from constants.js */}
+        <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
         {["home", "about", "work", "skills", "contact"].map((item) => (
@@ -25,43 +44,43 @@ const Navbar = () => {
       <div className="app_resume">
         <a
           href="https://drive.google.com/file/d/1vMQeTtJhlJhY2KFmmNNKLfQc6x2cU5uU/view?usp=drive_link"
-          class="btn btn2"
+          className="btn btn2"
           target="_blank"
         >
           Resume
         </a>
-
-        {/* <a
-          className="btn"
-          target="_blank"
-          href="https://drive.google.com/file/d/1vMQeTtJhlJhY2KFmmNNKLfQc6x2cU5uU/view?usp=drive_link"
-        >
-          Resume
-        </a> */}
       </div>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
-        {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
-          >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {["home", "about", "work", "skills", "contact", "resume"].map(
-                (item) => (
-                  <li key={item}>
-                    <a href={`#${item}`} onClick={() => setToggle(false)}>
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {toggle && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              variants={menuAnimation}
+              transition={menuTransition}
+            >
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+                {["home", "about", "work", "skills", "contact", "resume"].map(
+                  (item) => (
+                    <li key={item}>
+                      <a
+                        href={`#${item}`}
+                        onClick={() => handleMenuClick(item)}
+                      >
+                        {item}
+                      </a>
+                    </li>
+                  )
+                )}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
