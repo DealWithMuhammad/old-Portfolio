@@ -22,6 +22,23 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="app_resume">
+        <a
+          href="https://drive.google.com/file/d/1vMQeTtJhlJhY2KFmmNNKLfQc6x2cU5uU/view?usp=drive_link"
+          class="btn btn2"
+          target="_blank"
+        >
+          Resume
+        </a>
+
+        {/* <a
+          className="btn"
+          target="_blank"
+          href="https://drive.google.com/file/d/1vMQeTtJhlJhY2KFmmNNKLfQc6x2cU5uU/view?usp=drive_link"
+        >
+          Resume
+        </a> */}
+      </div>
 
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
@@ -33,13 +50,15 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {["home", "about", "work", "skills", "contact"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["home", "about", "work", "skills", "contact", "resume"].map(
+                (item) => (
+                  <li key={item}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
         )}
