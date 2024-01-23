@@ -74,7 +74,7 @@ const Skills = () => {
                     >
                       {work.desc}
                     </Tooltip>
-                    ;
+                    {work.desc}
                   </>
                 ))}
               </motion.div>
