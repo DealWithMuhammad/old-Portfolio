@@ -18,6 +18,7 @@ import sass from "../assets/sass.png";
 import typescript from "../assets/typescript.png";
 import vue from "../assets/vue.png";
 import dotnet from "../assets/dotnet.png";
+import nextjs from "../assets/next.js.png";
 
 import about01 from "../assets/about01.png";
 import about02 from "../assets/about02.png";
@@ -28,7 +29,6 @@ import profile from "../assets/me.png";
 import circle from "../assets/circle.svg";
 import logo from "../assets/logo.png";
 
-import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
 import asus from "../assets/asus.png";
 import bolt from "../assets/bolt.png";
@@ -63,7 +63,6 @@ export default {
   profile,
   circle,
   logo,
-  adidas,
   amazon,
   asus,
   bolt,
@@ -71,4 +70,5 @@ export default {
   skype,
   spotify,
   dotnet,
+  nextjs,
 };
